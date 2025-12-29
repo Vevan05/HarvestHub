@@ -50,8 +50,8 @@ Predicted Yield (JSON)
 Displayed in UI
 
 ### Additional Integrations:
-Frontend → WeatherAPI → Weather Data → Backend
-Frontend → Google Gemini → AI Farming Advice → UI
+1. Frontend → WeatherAPI → Weather Data → Backend
+2. Frontend → Google Gemini → AI Farming Advice → UI
 
 ## 🔄 Data Flow
 
