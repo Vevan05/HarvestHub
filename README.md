@@ -37,17 +37,17 @@ It combines a modern **Vite + React frontend** with a powerful **Flask + Machine
 
 ## 🧩 System Architecture
 
-User (Browser)
-↓
-Vite + React Frontend
-↓
-POST /predict
-↓
-Flask Backend + ML Model
-↓
-Predicted Yield (JSON)
-↓
-Displayed in UI
+User (Browser)  
+↓  
+Vite + React Frontend  
+↓  
+POST /predict  
+↓  
+Flask Backend + ML Model  
+↓  
+Predicted Yield (JSON)  
+↓  
+Displayed in UI  
 
 ### Additional Integrations:
 1. Frontend → WeatherAPI → Weather Data → Backend

@@ -19,7 +19,6 @@ function App() {
         <Hero />
         <Features />
         <PredictionTool />
-        <Statistics />
         <Resources />
         <Contact />
         <Chatbot />

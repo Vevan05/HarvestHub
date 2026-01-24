@@ -7,10 +7,6 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex items-center bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Shield className="h-4 w-4 mr-2" />
-              Government of Odisha Initiative
-            </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
               AI-Powered <span className="text-orange-600">Crop Yield</span> Predictions
@@ -46,7 +42,7 @@ const Hero = () => {
                 <div className="text-gray-600">Farmers</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-600">36</div>
+                <div className="text-2xl font-bold text-orange-600">28</div>
                 <div className="text-gray-600">States</div>
               </div>
             </div>
@@ -72,10 +68,6 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3 text-sm text-gray-500">
-                <Zap className="h-4 w-4 text-yellow-500" />
-                <span>Powered by Advanced AI Models</span>
-              </div>
             </div>
 
             {/* Floating elements */}

@@ -20,14 +20,6 @@ const Resources = () => {
       downloadable: false
     },
     {
-      type: 'Research',
-      title: 'AI Model Technical Documentation',
-      description: 'Detailed documentation of our machine learning algorithms',
-      icon: BookOpen,
-      color: 'bg-green-500',
-      downloadable: true
-    },
-    {
       type: 'Report',
       title: 'Agricultural Statistics 2024',
       description: 'Latest statistical data on crop production and yields',
@@ -60,7 +52,6 @@ const Resources = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Resources */}
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-8">Download Resources</h3>
             
@@ -125,7 +116,7 @@ const Resources = () => {
               ))}
             </div>
 
-            <div className="mt-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 text-white">
+            <div className="mt-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 text-white">
               <h4 className="text-xl font-semibold mb-2">Need Help?</h4>
               <p className="mb-4 text-orange-100">
                 Our support team is available 24/7 to assist you with any questions 

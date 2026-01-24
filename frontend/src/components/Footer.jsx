@@ -38,12 +38,11 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">AI Crop Predictor</h3>
-                <p className="text-gray-400 text-sm">Government of Odisha</p>
               </div>
             </div>
             
             <p className="text-gray-400 leading-relaxed mb-6">
-              Empowering Odisha's farmers with cutting-edge AI technology for accurate 
+              Empowering India's farmers with cutting-edge AI technology for accurate 
               crop yield predictions and sustainable agricultural practices.
             </p>
             
@@ -60,7 +59,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Links Sections */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h4 className="text-lg font-semibold mb-6">{title}</h4>
@@ -80,40 +78,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="flex items-center space-x-3">
-              <Mail className="h-5 w-5 text-orange-500" />
-              <div>
-                <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">support@aicropyield.odisha.gov.in</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-3">
-              <Phone className="h-5 w-5 text-orange-500" />
-              <div>
-                <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+91-674-2536425</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-3">
-              <Sprout className="h-5 w-5 text-orange-500" />
-              <div>
-                <p className="text-sm text-gray-400">Department</p>
-                <p className="text-white">Agriculture & Farmers' Empowerment</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 Government of Odisha. All rights reserved.
-          </p>
           
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-orange-400 text-sm transition-colors duration-200">

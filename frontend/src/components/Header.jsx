@@ -21,12 +21,10 @@ const Header = () => {
               <Sprout className="h-14 w-14 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-800">AI Crop Predictor</h1>
-              <p className="text-sm text-gray-600 p-2">Government of Odisha</p>
+              <h1 className="text-xl font-bold text-gray-800">Harvest Hub</h1>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <a
