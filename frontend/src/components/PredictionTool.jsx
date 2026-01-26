@@ -299,7 +299,7 @@ const PredictionTool = () => {
   const isFormComplete = Object.values(formData).every(v => v !== '');
 
   return (
-    <section id="prediction" className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+    <section id="prediction" className="py-10 bg-gradient-to-br from-blue-50 to-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">AI Crop Yield Prediction Tool</h2>
@@ -311,22 +311,7 @@ const PredictionTool = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Farm Details</h3>
-            
-            <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
-              <div className="flex items-center mb-2">
-                <Navigation className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="font-medium text-blue-800">Location Services</span>
-              </div>
-              <p className="text-sm text-blue-700 mb-3">
-                We'll use your current location to fetch accurate weather data when you generate predictions.
-                Temperature and rainfall data will be automatically filled from your location.
-              </p>
-              {locationError && (
-                <div className="mt-2 bg-red-50 text-red-700 p-2 rounded-md text-sm">
-                  Location Error: {locationError}
-                </div>
-              )}
-            </div>
+
             
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Language */}
@@ -376,41 +361,40 @@ const PredictionTool = () => {
                   </select>
                 </div>
               </div>
-
-              {/* Season */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  <Calendar className="inline h-4 w-4 mr-1" /> Season
-                </label>
-                <select
-                  name="Season"
-                  value={formData.Season}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 text-black"
-                >
-                  <option value="">Select Season</option>
-                  <option value="kharif">Kharif</option>
-                  <option value="rabi">Rabi</option>
-                  <option value="zaid">Zaid</option>
-                </select>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <Calendar className="inline h-4 w-4 mr-1" /> Season
+                  </label>
+                  <select
+                    name="Season"
+                    value={formData.Season}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 text-black"
+                  >
+                    <option value="">Select Season</option>
+                    <option value="kharif">Kharif</option>
+                    <option value="rabi">Rabi</option>
+                    <option value="zaid">Zaid</option>
+                  </select>
+                  </div>
+                  
+                  <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Pesticide (kg/ha)</label>
+                  <input
+                    type="number"
+                    name="Pesticide"
+                    value={formData.Pesticide}
+                    onChange={handleInputChange}
+                    placeholder="e.g., 5"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 text-black"
+                    required
+                  />
+                </div>
               </div>
 
-              {/* Pesticide */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Pesticide (kg/ha)</label>
-                <input
-                  type="number"
-                  name="Pesticide"
-                  value={formData.Pesticide}
-                  onChange={handleInputChange}
-                  placeholder="e.g., 5"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 text-black"
-                  required
-                />
-              </div>
-
-              {/* Nutrients */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Nitrogen Level (ppm)</label>
@@ -523,10 +507,28 @@ const PredictionTool = () => {
               </div>
             )}
             {prediction === null && (
-              <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-                <Thermometer className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-700">No Prediction Yet</h3>
-                <p className="text-gray-500 mt-2">Fill the form to get AI-powered insights</p>
+              <div>
+                <div className="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <div className="flex items-center mb-2">
+                    <Navigation className="h-5 w-5 text-blue-600 mr-2" />
+                    <span className="font-medium text-blue-800">Location Services</span>
+                  </div>
+                  <p className="text-sm text-blue-700 mb-3">
+                    We'll use your current location to fetch accurate weather data when you generate predictions.
+                    Temperature and rainfall data will be automatically filled from your location.
+                  </p>
+                  {locationError && (
+                    <div className="mt-2 bg-red-50 text-red-700 p-2 rounded-md text-sm">
+                      Location Error: {locationError}
+                    </div>
+                  )}
+              </div>
+
+                <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
+                  <Thermometer className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-700">No Prediction Yet</h3>
+                  <p className="text-gray-500 mt-2">Fill the form to get AI-powered insights</p>
+                </div>
               </div>
             )}
 

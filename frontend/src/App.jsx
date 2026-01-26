@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import PredictionTool from './components/PredictionTool';
-import Statistics from './components/Statistics';
 import Resources from './components/Resources';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
