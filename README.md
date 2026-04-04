@@ -1,4 +1,4 @@
-# 🌾 Harvest Hub — Smart Crop Yield Prediction & Optimization Platform
+# 🌾 Harvest Hub — Smart Crop Yield Prediction Platform
 
 **Harvest Hub** is a full-stack web application that helps farmers and agricultural planners **predict crop yield** and receive **AI-driven farming advice** using machine learning, real-time weather data, and Google Gemini AI.
 
